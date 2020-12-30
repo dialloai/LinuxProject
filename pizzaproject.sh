@@ -10,12 +10,13 @@ echo "********** Welcome to ***********"
 echo "********** PizzaMania ***********"
 sleep 2
 read -p "What is your name >> " name
+echo " " 
 echo "Welcome Dear $name "
 sleep 2
 echo "1 - Small size "
 echo "2 - Medium size "
 echo "3 - Large size "
-read -p "Please chose your pizza's size >> " size
+read -p "Please chose your pizza's size [1-3]>> " size
 if [ $size -eq 1 ]; then
 echo "Great choice, you chose small size pizza "
 elif [ $size -eq 2 ]; then
@@ -32,7 +33,7 @@ sleep 2
 echo "1 - Cheese Pizza "
 echo "2 - Meat Pizza  "
 echo "3 - Vegan Pizza "
-read -p "Please chose your pizza's kind >> " size
+read -p "Please chose your pizza's kind [1-3]>> " size
 if [ $size -eq 1 ]; then
 echo "Great choice, you chose Cheese pizza "
 elif [ $size -eq 2 ]; then
@@ -46,12 +47,13 @@ echo "************************"
 echo " "
 sleep 2
 
-
+echo "Please choose your beverage [1-4] >> " 
+echo " "
 echo "1 - Coke "
 echo "2 - Pepsi  "
 echo "3 - Water "
 echo "4 - None "
-read -p "Please choose your beverage >> " size
+read -p "Choice >> " size 
 if [ $size -eq 1 ]; then
 echo "Great choice, you chose Coke "
 elif [ $size -eq 2 ]; then
