@@ -13,9 +13,9 @@ read -p "What is your name >> " name
 echo " " 
 echo "Welcome Dear $name "
 sleep 1
-echo "1 - Small size "
-echo "2 - Medium size "
-echo "3 - Large size "
+echo "1 - Small size  >> $ 10"
+echo "2 - Medium size >> $ 12"
+echo "3 - Large size  >> $ 14"
 read -p "Please chose your pizza's size [1-3]>> " size;
 if [ $size -eq 1 ]; then
 echo "Great choice, you chose small size pizza ";
@@ -34,9 +34,9 @@ echo " "
 echo "************************"
 echo " "
 sleep 1
-echo "1 - Cheese Pizza "
-echo "2 - Meat Pizza  "
-echo "3 - Vegan Pizza "
+echo "1 - Cheese Pizza >> $ 1"
+echo "2 - Meat Pizza   >> $ 2"
+echo "3 - Vegan Pizza  >> $ 3"
 read -p "Please chose your pizza's kind [1-3]>> " size;
 if [ $size -eq 1 ]; then
 echo "Great choice, you chose Cheese pizza ";
@@ -52,14 +52,14 @@ fi
 echo " "
 echo "************************"
 echo " "
-sleep 2
+sleep 1
 
 echo "Please choose your beverage [1-4] >> " 
 echo " "
-echo "1 - Coke "
-echo "2 - Pepsi  "
-echo "3 - Water "
-echo "4 - None "
+echo "1 - Coke  >> $ 1"
+echo "2 - Pepsi >> $ 2"
+echo "3 - Water >> $ 3"
+echo "4 - None  >> $ 0"
 read -p "Choice >> " size; 
 if [ $size -eq 1 ]; then
 echo "Great choice, you chose Coke ";
@@ -76,13 +76,20 @@ bcost=0
 fi
 sum=$(($tcost+$bcost+$pcost))
 tax=`echo "scale=2; $sum*107/100" | bc`
+echo " "
 echo "Total cost with tax is $ $tax"
 
+echo " "
 
-
-#tax=7/100
-#tax1=$(($sum*$tax)) 
-#sum1=$(($sum+$tax1))
-#echo "Total cost with tax is $ $sum1 "
+echo "1 - Carryout"
+echo "2 - Delivery"
+read -p "Please choose carryout or delivery [1-2] >> " ops
+if [ $ops -eq 1 ]; then
+echo "Great choice, you chose Carryout "
+else
+echo "Great choice, you chose Delivery ";
+read -p "Please enter your address >> " address;
+echo "Thank you for choosing us... "
+fi
 
 
