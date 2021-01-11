@@ -21,6 +21,7 @@ if [ $size -eq 1 ]; then
 echo "Great choice, you chose small size pizza ";
 
 pcost=10
+
 elif [ $size -eq 2 ]; then
 echo "Great choice, you chose medium size pizza ";
 pcost=12
@@ -37,11 +38,11 @@ sleep 1
 echo "1 - Cheese Pizza >> $ 1"
 echo "2 - Meat Pizza   >> $ 2"
 echo "3 - Vegan Pizza  >> $ 3"
-read -p "Please chose your pizza's kind [1-3]>> " size;
-if [ $size -eq 1 ]; then
+read -p "Please chose your pizza's kind [1-3]>> " kind;
+if [ $kind -eq 1 ]; then
 echo "Great choice, you chose Cheese pizza ";
 tcost=1
-elif [ $size -eq 2 ]; then
+elif [ $kind -eq 2 ]; then
 echo "Great choice, you chose Meat pizza ";
 tcost=2
 else
@@ -60,14 +61,14 @@ echo "1 - Coke  >> $ 1"
 echo "2 - Pepsi >> $ 2"
 echo "3 - Water >> $ 3"
 echo "4 - None  >> $ 0"
-read -p "Choice >> " size; 
-if [ $size -eq 1 ]; then
+read -p "Choice >> " bev; 
+if [ $bev -eq 1 ]; then
 echo "Great choice, you chose Coke ";
 bcost=1
-elif [ $size -eq 2 ]; then
+elif [ $bev -eq 2 ]; then
 echo "Great choice, you chose Pepsi ";
 bcost=2
-elif [ $size -eq 3 ]; then 
+elif [ $bev -eq 3 ]; then 
 echo "Healthy choice, you chose Water ";
 bcost=3
 else
@@ -91,5 +92,27 @@ echo "Great choice, you chose Delivery ";
 read -p "Please enter your address >> " address;
 echo "Thank you for choosing us... "
 fi
-
-
+echo "Here is your order summary >>" 
+if [ $size -eq 1 ]; then
+echo "Small pizza"
+elif [ $size -eq 2 ]; then
+echo "Medium pizza"
+elif [ $size -eq 3 ]; then
+echo "Large pizza"
+fi
+if [ $kind -eq 1 ]; then
+echo "Cheese Pizza"
+elif [ $kind -eq 2 ]; then
+echo "Meat Pizza"
+elif [ $kind -eq 3 ]; then
+echo "Vegan Pizza"
+fi
+if [ $bev -eq 1 ]; then
+echo "Coke"
+elif [ $bev -eq 2 ]; then
+echo "Pepsi"
+elif [ $bev -eq 3 ]; then
+echo "Water"
+elif [ $bev -eq 4 ]; then
+echo "No beverage"
+fi
