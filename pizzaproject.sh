@@ -13,6 +13,8 @@ read -p "What is your name >> " name
 echo " " 
 echo "Welcome Dear $name "
 sleep 1
+echo "************************"
+echo " "
 echo "1 - Small size  >> $ 10"
 echo "2 - Medium size >> $ 12"
 echo "3 - Large size  >> $ 14"
@@ -77,6 +79,8 @@ bcost=0
 fi
 
 echo " "
+echo "************************"
+echo " "
 echo "1 - Carryout"
 echo "2 - Delivery"
 read -p "Please choose carryout or delivery [1-2] >> " ops
@@ -84,13 +88,16 @@ if [ $ops -eq 1 ]; then
 echo "Great choice, you chose Carryout "
 else
 echo "Great choice, you chose Delivery ";
+
 read -p "Please enter your address >> " address;
 echo "Thank you " 
 fi
 
 echo " "
-
+echo "************************"
+echo " "
 echo "Here is your order summary >>" 
+echo " " 
 if [ $size -eq 1 ]; then
 echo "Small pizza"
 elif [ $size -eq 2 ]; then
@@ -121,6 +128,6 @@ echo " "
 echo "Total cost with tax is $ $tax"
 
 echo " "
-echo "Thank you for choosing us... "
+echo "Thank you for choosing **PIZZAMANIA**. Come back soon :-) "
 
 
