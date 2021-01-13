@@ -5,9 +5,13 @@
 #Authors - Yasin TASASIZ - Aicha Diallo - Jeff Kohler
 
 clear
-
-echo "********** Welcome to ***********"
-echo "********** PizzaMania ***********"
+echo "*******************************************************"
+figlet -f slant "Pizzamania"
+echo "*******************************************************"
+echo " "
+echo " "
+echo -e "\033[31m********** Welcome to ***********\033[0m"
+echo -e "\033[31m********** PizzaMania ***********\033[0m"
 sleep 1
 echo " "
 read -p "What is your name? >> " name
