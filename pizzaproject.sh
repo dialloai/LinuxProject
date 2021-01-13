@@ -9,25 +9,32 @@ clear
 echo "********** Welcome to ***********"
 echo "********** PizzaMania ***********"
 sleep 1
-read -p "What is your name >> " name
+echo " "
+read -p "What is your name? >> " name
 echo " " 
 echo "Welcome Dear $name "
 sleep 1
+echo " "
 echo "************************"
 echo " "
 echo "1 - Small size  >> $ 10"
 echo "2 - Medium size >> $ 12"
 echo "3 - Large size  >> $ 14"
+echo " "
 read -p "Please chose your pizza's size [1-3]>> " size;
 if [ $size -eq 1 ]; then
+echo " "
 echo "Great choice, you chose small size pizza ";
 
 pcost=10
 
 elif [ $size -eq 2 ]; then
+echo " "
 echo "Great choice, you chose medium size pizza ";
 pcost=12
+echo " "
 else
+echo " "
 echo "Great choice, you chose large size pizza ";
 pcost=14
 fi
@@ -40,14 +47,18 @@ sleep 1
 echo "1 - Cheese Pizza >> $ 1"
 echo "2 - Meat Pizza   >> $ 2"
 echo "3 - Vegan Pizza  >> $ 3"
+echo " "
 read -p "Please chose your pizza's kind [1-3]>> " kind;
 if [ $kind -eq 1 ]; then
+echo " "
 echo "Great choice, you chose Cheese pizza ";
 tcost=1
 elif [ $kind -eq 2 ]; then
+echo " "
 echo "Great choice, you chose Meat pizza ";
 tcost=2
 else
+echo " "
 echo "Great choice, you chose Vegan pizza ";
 tcost=3
 fi
@@ -63,14 +74,18 @@ echo "1 - Coke  >> $ 1"
 echo "2 - Pepsi >> $ 2"
 echo "3 - Water >> $ 3"
 echo "4 - None  >> $ 0"
+echo " "
 read -p "Choice >> " bev; 
 if [ $bev -eq 1 ]; then
+echo " "
 echo "Great choice, you chose Coke ";
 bcost=1
 elif [ $bev -eq 2 ]; then
+echo " "
 echo "Great choice, you chose Pepsi ";
 bcost=2
-elif [ $bev -eq 3 ]; then 
+elif [ $bev -eq 3 ]; then
+echo " " 
 echo "Healthy choice, you chose Water ";
 bcost=3
 else
@@ -83,13 +98,17 @@ echo "************************"
 echo " "
 echo "1 - Carryout"
 echo "2 - Delivery"
+echo " "
 read -p "Please choose carryout or delivery [1-2] >> " ops
 if [ $ops -eq 1 ]; then
+echo " "
 echo "Great choice, you chose Carryout "
 else
+echo " "
 echo "Great choice, you chose Delivery ";
-
+echo " "
 read -p "Please enter your address >> " address;
+echo " "
 echo "Thank you " 
 fi
 
@@ -121,13 +140,18 @@ echo "Water"
 elif [ $bev -eq 4 ]; then
 echo "No beverage"
 fi
-echo " "
 sum=$(($tcost+$bcost+$pcost))
 tax=`echo "scale=2; $sum*107/100" | bc`
 echo " "
 echo "Total cost with tax is $ $tax"
-
 echo " "
-echo "Thank you for choosing **PIZZAMANIA**. Come back soon :-) "
-
+echo "**************************************"
+echo " "
+echo "Thank you for choosing  **PIZZAMANIA**" 
+echo "Your order is complete."
+echo "Come back soon :-) "
+echo " "
+echo "**************************************"
+echo " "
+echo " "
 
