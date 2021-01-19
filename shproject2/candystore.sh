@@ -4,19 +4,21 @@ echo "***Welcome to Candyland!***"
 
 sleep 3
 
+echo " "
 read -p "What is your name?" name
-
+echo " "
 echo "$name, welcome to Candyland"
-
+echo " "
 echo "*******"
-
+echo " "
 echo "$name, What kind of candy would you like?"
 echo " "
-echo "1 - Lollipop"
+echo "1 -Lollipop"
 echo "2- Bubble Gum"
 echo "3- Candycane"
 echo " "
 read -p "Please choose options 1-3..." options
+echo " "
 if [ $options -eq 1 ]; then
 echo "Those are popular around here! Great choice!"
 elif [ $options -eq 2 ]; then
@@ -29,8 +31,9 @@ echo "$name, would you like anything else?"
 echo "1- Yes"
 echo "2- No"
 read -p "Yes, or no?" yn
+echo " "
 if [ $yn -eq 1 ]; then
-echo "Ok, my colleague will be right over"
+echo "Ok, my colleague will be right over to help you!"
 elif [ $yn -eq 2 ]; then
 echo "Great, let's check you out!"
 fi
