@@ -1,5 +1,6 @@
 #!/bin/bash
 
+figlet -f slant "CARMANIA"
 
 echo "Welcome to Carmania!"
 
@@ -22,7 +23,8 @@ echo "2 - Honda"
 echo "3 - Audi"
 echo "4 - Toyota"
 echo " "
-read -p "Choose 1 option [1-4]" choice
+read -p "Which car would you like to purchase? [1-4]" choice
+echo " "
 if [ $choice -eq 1 ]; then
 echo "Very fancy. The price is $ 10,000"
 elif [ $choice -eq 2 ]; then
@@ -37,18 +39,17 @@ echo "Would you like a loan or pay upfront?"
 echo "1 -Loan"
 echo "2 - Pay"
 read -p "What choice would you like?" lp
+echo " "
 if [ $lp -eq 1 ]; then
 echo "Ok, we have 0 $ APR, no interest here ! A Loan officer will be right over!"
 elif [ $lp -eq 2 ]; then
 echo "Nice! Sales  will be right over"
 fi
 echo " "
-echo "1 - Yes"
-echo "2 - No"
 read -p  "Is there anything else I can help you with $name?, 1)Yes or 2)No?" yaynay
 echo " "
 if [ $yaynay -eq 1 ]; then
-echo "Ok, my sales representative will come and help you"
+echo "Ok, my sales representative will come and help you momentarily."
 elif [ $yaynay -eq 2 ]; then
-echo "Great, come this way to check out."
+echo "Great, come this way to check out. Thank you for your business and for choosing Carmania!"
 fi
