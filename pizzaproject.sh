@@ -4,6 +4,8 @@
 
 #Authors - Yasin TASASIZ - Aicha Diallo - Jeff Kohler
 
+#This part of our project prints our company name.... 
+
 clear
 echo "*******************************************************"
 figlet -f slant "Pizzamania"
@@ -14,10 +16,16 @@ echo -e "\033[31m********** Welcome to ***********\033[0m"
 echo -e "\033[31m********** PizzaMania ***********\033[0m"
 sleep 1
 echo " "
+
+#We are asking for the customer name.....
+
 read -p "What is your name? >> " name
 echo " " 
 echo "Welcome Dear $name "
 sleep 1
+
+#We are asking for pizza size....
+
 echo " "
 echo "************************"
 echo " "
@@ -47,6 +55,9 @@ sleep 1
 echo " "
 echo "************************"
 echo " "
+
+#We are asking for the pizza kind....
+
 sleep 1
 echo "1 - Cheese Pizza >> $ 1"
 echo "2 - Meat Pizza   >> $ 2"
@@ -71,6 +82,8 @@ echo " "
 echo "************************"
 echo " "
 sleep 1
+
+#We are asking for the beverage....
 
 echo "Please choose your beverage [1-4] >> " 
 echo " "
@@ -100,6 +113,9 @@ fi
 echo " "
 echo "************************"
 echo " "
+
+#We are asking whether carryout or delivery
+
 echo "1 - Carryout"
 echo "2 - Delivery"
 echo " "
@@ -119,6 +135,9 @@ fi
 echo " "
 echo "************************"
 echo " "
+
+#We are printing the order summary....
+ 
 echo "Here is your order summary >>" 
 echo " " 
 if [ $size -eq 1 ]; then
@@ -144,6 +163,9 @@ echo "Water"
 elif [ $bev -eq 4 ]; then
 echo "No beverage"
 fi
+
+#We calculate the total cost of your order
+
 sum=$(($tcost+$bcost+$pcost))
 tax=`echo "scale=2; $sum*107/100" | bc`
 echo " "
@@ -151,6 +173,9 @@ echo "Total cost with tax is $ $tax"
 echo " "
 echo "**************************************"
 echo " "
+
+#We thank the customer....
+
 echo "Thank you for choosing  **PIZZAMANIA**" 
 echo "Your order is complete."
 echo "Come back soon :-) "
